@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Elle's Wind Power Dashboard</title> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" type='text/css' href="style.css"> 
+    
+    <!--external fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+  </head>
+<body class=""> 
+
+    <!-- Header Section -->
+    <header class="w-full max-w-6xl text-center mb-8">
+        <h1>
+          How can I help you today?
+        </h1>
+        <p>I'm Elle, your wind turbine's best friend!</p>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <section id="turbine-data-card">
+            <h2>Data</h2>
+            <div>
+                <p><strong>Wind Speed:</strong> <span id="windspeed">n/a</span></p>
+                <p><strong>Wind Direction:</strong> <span id="winddirection">n/a</span></p>
+                <p><strong>Current Power:</strong> <span id="currentpower">n/a</span></p>
+            </div>
+        </section>
+
+        <section id="turbinemenu">
+            <h2>Turbine Health</h2>
+            <div class="healthfigures">
+                <p>Generator temperature: <span id="generatortemperature">n/a</span></p>
+                <p>Battery temperature: <span id="batterytemperature">n/a</span></p>
+                <div class="flex-center">
+                    <strong>Status:</strong>
+                    <strong id="turbinestatus">Offline</strong>
+                </div>
+            </div>
+        </section>
+
+        <section id="agriculturemenu">
+            <h2>Agriculture Menu</h2>
+            <p id="agricultureinsights">No insights available.</p>
+            <div id="agriculturefigures">
+                <p>You should irrigate at 23:00 today.</p>
+                <p id="agricultureaioutput">AI output here.</p>
+            </div>
+        </section>
+
+        <section id="chatbotmenu">
+            <h2>Ask me anything.</h2>
+            <div id="chathistory">
+                <p>Type a message</p>
+            </div>
+
+            <form id="chatbotform">
+                <input
+                    type="text"
+                    id="chatinput"
+                    placeholder="How's the turbine doing?"
+                />
+
+                <button
+                    type="submit"
+                    id="sendbutton"
+                    class=""
+                >
+                    Send
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        &copy; <span id="current-year"></span> Elle's Wind Power. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

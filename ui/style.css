@@ -1,0 +1,228 @@
+body, h1, h2, p, form, input, button, section, article, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    background-color: #5BC0EB; 
+    color: #333; 
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    max-width:  60rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #2d3047;
+    margin-bottom: 1.5rem;
+}
+
+header p {
+    font-family: "Intel One Mono", monospace;
+    font-size: 1.1em;
+    color: #555;
+}
+
+main {
+    font-family: "Intel One Mono", monospace;
+    width: 100%;
+    max-width: 62rem; 
+    display: grid;
+    gap: 1rem; 
+    grid-template-columns: 1fr; 
+}
+
+@media (min-width: 40rem) { /* Medium screens and up */
+    main {
+        grid-template-columns: 1fr 1fr; /* Two columns */
+    }
+    #agriculturemenu {
+        grid-column: span 2; /* Agriculture card spans two columns on medium screens */
+    }
+    #chatbotmenu {
+        grid-column: span 2; /* Chatbot card spans two columns on medium screens */
+    }
+}
+
+@media (min-width: 60rem) { /* Large screens and up */
+    main {
+        grid-template-columns: 1fr 1fr 1fr; /* Three columns */
+    }
+    #agriculturemenu {
+        grid-column: span 1; /* Agriculture card back to 1 column on large screens */
+    }
+    #chatbotmenu {
+        grid-column: span 3; /* Chatbot card spans three columns on large screens */
+    }
+}
+
+section {
+    background-color: #fff; 
+    border: 1px solid #ddd; 
+    border-radius: .5rem;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.01); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 1.8em;
+    color: #1a2b4d; 
+    margin-bottom: 1rem; 
+}
+
+section p {
+    margin-bottom: .5rem;
+}
+
+section strong {
+    color: #333; 
+}
+
+.healthfigures .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+#turbinestatus {
+    padding: .5rem;
+    border-radius: .3rem;
+    color: black;
+}
+
+/* status colors */
+/* .status-operational { background-color: #28a745; } */
+/* .status-warning { background-color: #ffc107; } */
+/* .status-error { background-color: #dc3545; } */
+
+#agriculturemenu ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    text-align: left; /* Align list items to the left */
+    width: 100%; /* Ensure list takes full width */
+}
+
+#agriculturemenu ul li {
+    margin-bottom: .5rem;
+}
+
+#chatbotmenu {
+    text-align: left; 
+}
+
+#chathistory {
+    background-color: #eee; 
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    height: 10rem; 
+    overflow-y: auto; 
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column; 
+}
+
+#chathistory p {
+    text-align: center;
+    color: #888;
+    margin: auto; 
+}
+
+.chat-message {
+    margin-bottom: 1rem;
+    padding: .5rem .8rem;
+    border-radius: 1rem;
+    max-width: 80%;
+    word-wrap: break-word; 
+}
+
+.chat-message.user {
+    background-color: #007bff; 
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: .5rem; 
+}
+
+.chat-message.bot {
+    background-color: #5bc0eb; 
+    color: #eee;
+    align-self: flex-start; 
+    border-bottom-left-radius: .3rem; 
+}
+
+.chat-message.typing {
+    font-style: italic;
+    color: #888;
+    align-self: flex-start;
+}
+
+
+#chatbotform {
+    display: flex;
+    margin-top: 1rem;
+}
+
+#chatinput {
+    flex-grow: 1;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: .5rem 0 0 .5rem;
+    font-size: 1em;
+    font-family: 'Times New Roman', serif; 
+}
+
+#chatinput:focus {
+    outline: none;
+    border-color: #007bff; 
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+#sendbutton {
+    padding: .8rem 1rem;
+    background-color: #5bc0eb; 
+    color: white;
+    border: none;
+    border-radius: 0 .3rem .3rem 0;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Intel One Mono', monospace; 
+    transition: background-color 0.2s ease;
+}
+
+#sendbutton:hover {
+    background-color: #0056b3; 
+}
+
+#sendbutton:disabled {
+    background-color: #cccccc; 
+    cursor: not-allowed;
+}
+
+footer {
+    width: 100%;
+    max-width: 62rem; 
+    text-align: center;
+    margin-top: 2.2rem;
+    padding: 1rem;
+    color: #777;
+    font-size: 0.9em;
+    font-family: 'Intel One Mono', monospace;
+}
