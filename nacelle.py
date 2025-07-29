@@ -11,7 +11,6 @@ MQTT_BROBROKER_HOST = ""
 MQTT_PORT = 1883
 MQTT_TOPIC_BASE = "elle/turbine/"
 
-GEMINI_API_KEY = "AIzaSyCCeiCw5-I108sPwz8NG0UW8_clXDNVuIU" 
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
 
 app = Flask(__name__, static_folder='ui', template_folder='ui')
